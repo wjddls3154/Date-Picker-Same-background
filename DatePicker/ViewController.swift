@@ -59,6 +59,34 @@ class ViewController: UIViewController {
             view.backgroundColor = UIColor.red
         }
         
+        if lblCurrentTime.text == lblPickerTime.text {
+            let alertController = UIAlertController(title: "알림", message: "설정된 시간입니다.!!", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let DestructiveAction = UIAlertAction(title: "취소", style: UIAlertActionStyle.destructive) { (result : UIAlertAction) -> Void in
+            
+          
+        }
+        
+        let okAction = UIAlertAction(title: "네", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
+            
+            self.view.backgroundColor = UIColor.white
+            
+        }
+        
+        alertController.addAction(DestructiveAction)
+        
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        }
+        
+        
+        
+        
+        
+        
+        
     }
 }
 
